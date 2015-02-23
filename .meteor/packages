@@ -11,3 +11,5 @@ backend-base
 layout
 users
 notifications
+match-requests
+matches

@@ -12,7 +12,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.addFiles('matches.js');
+  api.use('backend-base');
+  api.addFiles('matches__collections.js', ['client', 'server']);
+  api.addFiles('matches__methods.js', ['client', 'server']);
+  api.addFiles('matches__publications.js', 'server');
 });
 
 Package.onTest(function(api) {

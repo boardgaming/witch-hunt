@@ -45,6 +45,7 @@ localstorage@1.0.2
 logging@1.0.6
 match-request-form@0.0.1
 match-requests@0.0.1
+matches@0.0.1
 matches-make@0.0.1
 matches-show@0.0.1
 meteor@1.1.4

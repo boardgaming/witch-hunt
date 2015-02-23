@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'matches-make',
+  name: 'match-request-form',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -13,13 +13,12 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
-  api.use('match-request-form', 'client');
-  api.addFiles('matches-make.html', 'client');
-  api.addFiles('matches-make.js', 'client');
+  api.addFiles('match-request-form.html', 'client');
+  api.addFiles('match-request-form.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('matches-make');
-  api.addFiles('matches-make-tests.js');
+  api.use('match-request-form');
+  api.addFiles('match-request-form-tests.js');
 });

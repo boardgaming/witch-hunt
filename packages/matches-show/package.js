@@ -12,9 +12,9 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.use('frontend-base');
-  api.addFiles('matches-show.html');
-  api.addFiles('matches-show.js');
+  api.use('frontend-base', 'client');
+  api.addFiles('matches-show.html', 'client');
+  api.addFiles('matches-show.js', 'client');
 });
 
 Package.onTest(function(api) {

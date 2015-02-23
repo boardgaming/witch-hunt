@@ -1,6 +1,7 @@
 <template name='matchesMake'>
   <div class='matches-make'>
     Welcome to the matchmaking page
-    {{> matchRequestPanel}}
+    {{> matchRequestPanel activeRequest=activeRequest}}
+    {{> matchRequestResults activeRequest=activeRequest}}
   </div>
 </template>

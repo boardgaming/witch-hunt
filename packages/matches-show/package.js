@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'routing',
+  name: 'matches-show',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -12,16 +12,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.use('iron:router@1.0.7');
-  api.imply('iron:router@1.0.7');
-  api.use('home');
-  api.use('matches-make');
-  api.use('matches-show');
-  api.addFiles('routing.js');
+  api.use('frontend-base');
+  api.addFiles('matches-show.html');
+  api.addFiles('matches-show.js');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('routing');
-  api.addFiles('routing-tests.js');
+  api.use('matches-show');
+  api.addFiles('matches-show-tests.js');
 });

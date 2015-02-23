@@ -8,6 +8,6 @@ meteor-platform
 autopublish
 insecure
 routing
-layout
 frontend-base
 backend-base
+layout

@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'header',
+  name: 'notification-panel',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -13,14 +13,13 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
-  api.use('notification-panel', 'client');
-  api.use('user-panel', 'client');
-  api.addFiles('header.html', 'client');
-  api.addFiles('header.js', 'client');
+  api.use('notifications', 'client');
+  api.addFiles('notification-panel.html', 'client');
+  api.addFiles('notification-panel.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('header');
-  api.addFiles('header-tests.js');
+  api.use('notification-panel');
+  api.addFiles('notification-panel-tests.js');
 });

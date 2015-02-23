@@ -1,0 +1,14 @@
+<template name='notificationPanel'>
+  <div class='notification-panel'>
+    This is where notifications will be seen
+    {{#each notifications}}
+      {{> notificationPanel__item}}
+    {{/each}}
+  </div>
+</template>
+
+<template name='notificationPanel__item'>
+  <div class='notification-panel__item'>
+    {{_id}}
+  </div>
+</template>

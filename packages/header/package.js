@@ -12,9 +12,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.use('frontend-base');
-  api.addFiles('header.html');
-  api.addFiles('header.js');
+  api.use('frontend-base', 'client');
+  api.use('user-panel', 'client');
+  api.addFiles('header.html', 'client');
+  api.addFiles('header.js', 'client');
 });
 
 Package.onTest(function(api) {

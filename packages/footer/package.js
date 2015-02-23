@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'layout',
+  name: 'footer',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -13,13 +13,12 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base');
-  api.use('header');
-  api.use('footer');
-  api.addFiles('layout.html');
+  api.addFiles('footer.html');
+  api.addFiles('footer.js');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('layout');
-  api.addFiles('layout-tests.js');
+  api.use('footer');
+  api.addFiles('footer-tests.js');
 });

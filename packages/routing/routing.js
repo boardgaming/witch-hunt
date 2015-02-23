@@ -2,4 +2,5 @@ Router.configure({
   defaultLayout: 'layout'
 });
 
-Router.route('/', 'Home');
+Router.route('/', 'home');
+Router.route('/matches/make', 'matchesMake')

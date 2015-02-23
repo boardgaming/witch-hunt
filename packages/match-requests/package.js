@@ -16,6 +16,7 @@ Package.onUse(function(api) {
   api.addFiles('match-requests__collections.js', ['client', 'server']);
   api.addFiles('match-requests__methods.js', ['client', 'server']);
   api.addFiles('match-requests__publications.js', 'server');
+  api.addFiles('match-requests__subscriptions.js', 'client');
 });
 
 Package.onTest(function(api) {

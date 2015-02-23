@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
-  api.use('match-request-form', 'client');
+  api.use('match-request-panel', 'client');
   api.addFiles('home.html', 'client');
   api.addFiles('home.js', 'client');
 });

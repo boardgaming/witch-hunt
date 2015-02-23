@@ -1,0 +1,9 @@
+<template name='matchRequestPanel'>
+  <div class='match-request-panel'>
+    {{#with activeRequest}}
+      {{> matchRequestPanel__tracker}}
+    {{else}}
+      {{> matchRequestPanel__form}}
+    {{/with}}
+  </div>
+</template>

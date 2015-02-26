@@ -1,7 +1,13 @@
 <template name='matchPanel'>
   <div class='match-panel'>
     This is panel for current match information
-    {{ currentMatch._id }}
-    Invited users: {{ currentMatch.invitedUserIds }}
+    Players!
+    {{#each players}}
+      {{this}}
+    {{/each}}
+    {{> sentInvites}}
+    <button class='match-panel__approve'>
+      Approve
+    </button>
   </div>
 </template>

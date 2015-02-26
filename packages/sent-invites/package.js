@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'invites-panel',
+  name: 'sent-invites',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -14,12 +14,14 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
   api.use('invites', 'client');
-  api.addFiles('invites-panel.html', 'client');
-  api.addFiles('invites-panel.js', 'client');
+  api.addFiles('__item/sent-invites__item.html', 'client');
+  api.addFiles('__item/sent-invites__item.js', 'client');
+  api.addFiles('sent-invites.html', 'client');
+  api.addFiles('sent-invites.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('invites-panel');
-  api.addFiles('invites-panel-tests.js');
+  api.use('sent-invites');
+  api.addFiles('sent-invites-tests.js');
 });

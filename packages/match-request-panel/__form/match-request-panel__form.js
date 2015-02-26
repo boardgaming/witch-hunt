@@ -7,7 +7,7 @@ Template.matchRequestPanel__form.events({
         throw error;
       }
 
-      Router.go('/matches/make');
+      Router.go('matches.make');
     });
   }
 });

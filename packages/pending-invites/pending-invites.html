@@ -1,0 +1,8 @@
+<template name='pendingInvites'>
+  <div class='pending-invites'>
+    Invites sent to me
+    {{#each invites}}
+      {{> pendingInvites__item}}
+    {{/each}}
+  </div>
+</template>

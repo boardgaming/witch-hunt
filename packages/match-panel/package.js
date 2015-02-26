@@ -14,6 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
   api.use('matches', 'client');
+  api.use('sent-invites', 'client');
   api.addFiles('match-panel.html', 'client');
   api.addFiles('match-panel.js', 'client');
 });

@@ -6,7 +6,7 @@ Template.matchRequestPanel__tracker.events({
       if (error) {
         throw error;
       }
-      Router.go('/');
+      Router.go('home');
     });
   }
 });

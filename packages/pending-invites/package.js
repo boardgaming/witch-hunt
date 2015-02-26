@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'matches-make',
+  name: 'pending-invites',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -13,16 +13,15 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
-  api.use('pending-invites', 'client');
-  api.use('match-panel', 'client');
-  api.use('match-request-panel', 'client');
-  api.use('match-request-results', 'client');
-  api.addFiles('matches-make.html', 'client');
-  api.addFiles('matches-make.js', 'client');
+  api.use('invites', 'client');
+  api.addFiles('__item/pending-invites__item.html', 'client');
+  api.addFiles('__item/pending-invites__item.js', 'client');
+  api.addFiles('pending-invites.html', 'client');
+  api.addFiles('pending-invites.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('matches-make');
-  api.addFiles('matches-make-tests.js');
+  api.use('pending-invites');
+  api.addFiles('pending-invites-tests.js');
 });

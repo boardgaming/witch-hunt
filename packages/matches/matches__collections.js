@@ -6,3 +6,7 @@ Matches.current = function() {
     return Matches.findOne({ matchRequestId: currentRequest._id });
   }
 }
+
+Matches.before.remove(function(userId, match) {
+  Invites.remove({ matchId: match._id });
+});

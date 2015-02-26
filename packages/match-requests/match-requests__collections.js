@@ -8,7 +8,8 @@ MatchRequests.after.insert(function(userId, matchRequest) {
   if (matchRequest.hosting) {
     Matches.insert({
       matchRequestId: matchRequest._id,
-      host: matchRequest.userId
+      host: matchRequest.userId,
+      approved: false
     });
   }
 });
@@ -16,7 +17,8 @@ MatchRequests.after.insert(function(userId, matchRequest) {
 MatchRequests.before.remove(function(userId, matchRequest) {
   if (matchRequest.hosting) {
     Matches.remove({
-      matchRequestId: matchRequest._id
+      matchRequestId: matchRequest._id,
+      approved: false
     });
   }
 });

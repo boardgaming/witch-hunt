@@ -1,8 +1,14 @@
 <template name='matchRequestResults'>
   <div class='match-request-results'>
     This is where we have matchmake results
-    {{#each suitablePlayers}}
-      {{> matchRequestResults__player}}
-    {{/each}}
+    {{#if currentRequest.hosting}}
+      {{#each suitablePlayers}}
+        {{> matchRequestResults__player}}
+      {{/each}}
+    {{else}}
+      {{#each suitableMatches}}
+        {{> matchRequestResults__match}}
+      {{/each}}
+    {{/if}}
   </div>
 </template>

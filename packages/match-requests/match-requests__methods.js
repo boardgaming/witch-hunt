@@ -12,7 +12,7 @@ Meteor.methods({
       userId: userId,
       date: '23.01',
       time: '17:00',
-      hosting: true
+      hosting: false
     });
   },
   'matchRequests.destroy': function() {

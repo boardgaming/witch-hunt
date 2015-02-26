@@ -18,6 +18,8 @@ Package.onUse(function(api) {
   api.use('invites', 'client');
   api.addFiles('__player/match-request-results__player.html', 'client');
   api.addFiles('__player/match-request-results__player.js', 'client');
+  api.addFiles('__match/match-request-results__match.html', 'client');
+  api.addFiles('__match/match-request-results__match.js', 'client');
   api.addFiles('match-request-results.html', 'client');
   api.addFiles('match-request-results.js', 'client');
 });

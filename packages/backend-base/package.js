@@ -13,7 +13,8 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.imply('mongo', ['client', 'server']);
-  api.addFiles('backend-base.js');
+  api.imply('matb33:collection-hooks', ['client', 'server']);
+  api.addFiles('backend-base.js', 'server');
 });
 
 Package.onTest(function(api) {

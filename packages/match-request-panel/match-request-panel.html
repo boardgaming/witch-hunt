@@ -1,6 +1,6 @@
 <template name='matchRequestPanel'>
   <div class='match-request-panel'>
-    {{#with activeRequest}}
+    {{#with currentRequest}}
       {{> matchRequestPanel__tracker}}
     {{else}}
       {{> matchRequestPanel__form}}

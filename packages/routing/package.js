@@ -13,11 +13,12 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('iron:router@1.0.7');
-  api.imply('iron:router@1.0.7');
-  api.use('home');
-  api.use('matches-make');
-  api.use('matches-show');
-  api.addFiles('routing.js');
+  api.imply('iron:router@1.0.7', ['client', 'server']);
+  api.use('layout', 'client');
+  api.use('home', 'client');
+  api.use('matches-make', 'client');
+  api.use('matches-show', 'client');
+  api.addFiles('routing.js', ['client', 'server']);
 });
 
 Package.onTest(function(api) {

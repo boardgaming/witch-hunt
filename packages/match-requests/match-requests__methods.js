@@ -6,9 +6,9 @@ Meteor.methods({
       throw new Meteor.Error('403', 'Not authorized');
     }
 
-    MatchRequests.upsert({
-      userId: userId
-    }, {
+    MatchRequests.remove({userId: userId});
+
+    MatchRequests.insert({
       userId: userId,
       date: '23.01',
       time: '17:00',
@@ -16,6 +16,6 @@ Meteor.methods({
     });
   },
   'matchRequests.destroy': function() {
-    MatchRequests.remove(MatchRequests.activeOneForCurrentUser());
+    MatchRequests.remove(MatchRequests.current());
   }
 });

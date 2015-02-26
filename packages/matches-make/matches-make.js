@@ -1,5 +1,5 @@
 Template.matchesMake.helpers({
-  activeRequest: function() {
-    return MatchRequests.activeOneForCurrentUser();
+  currentRequest: function() {
+    return MatchRequests.current();
   }
 });

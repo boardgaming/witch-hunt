@@ -8,8 +8,8 @@ meteor-platform
 routing
 frontend-base
 backend-base
-layout
 users
 notifications
 match-requests
 matches
+invites

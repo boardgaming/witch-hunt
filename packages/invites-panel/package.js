@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'matches-make',
+  name: 'invites-panel',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -13,16 +13,13 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
-  api.use('invites-panel', 'client');
-  api.use('match-panel', 'client');
-  api.use('match-request-panel', 'client');
-  api.use('match-request-results', 'client');
-  api.addFiles('matches-make.html', 'client');
-  api.addFiles('matches-make.js', 'client');
+  api.use('invites', 'client');
+  api.addFiles('invites-panel.html', 'client');
+  api.addFiles('invites-panel.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('matches-make');
-  api.addFiles('matches-make-tests.js');
+  api.use('invites-panel');
+  api.addFiles('invites-panel-tests.js');
 });

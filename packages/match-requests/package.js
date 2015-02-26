@@ -13,6 +13,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('backend-base', ['client', 'server']);
+  api.use('matches', 'server', { unordered: true });
   api.addFiles('match-requests__collections.js', ['client', 'server']);
   api.addFiles('match-requests__methods.js', ['client', 'server']);
   api.addFiles('match-requests__publications.js', 'server');

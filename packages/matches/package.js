@@ -12,10 +12,12 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.use('backend-base');
+  api.use('backend-base', ['client', 'server']);
+  api.use('match-requests', 'server', { unordered: true });
   api.addFiles('matches__collections.js', ['client', 'server']);
   api.addFiles('matches__methods.js', ['client', 'server']);
   api.addFiles('matches__publications.js', 'server');
+  api.addFiles('matches__subscriptions.js', 'client');
 });
 
 Package.onTest(function(api) {

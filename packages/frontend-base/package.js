@@ -12,8 +12,9 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.imply('templating');
-  api.addFiles('frontend-base.js');
+  api.imply('templating', ['client', 'server']);
+  api.use('routing', 'client', { unordered: true });
+  api.addFiles('frontend-base.js', 'client');
 });
 
 Package.onTest(function(api) {

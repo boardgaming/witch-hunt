@@ -14,6 +14,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
   api.use('users', 'client');
+  api.use('matches', 'client');
+  api.use('invites', 'client');
   api.addFiles('__player/match-request-results__player.html', 'client');
   api.addFiles('__player/match-request-results__player.js', 'client');
   api.addFiles('match-request-results.html', 'client');

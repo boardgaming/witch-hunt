@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'join-requests',
+  name: 'incoming-join-requests',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -12,15 +12,17 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.use('backend-base', ['client', 'server']);
-  api.addFiles('join-requests__collections.js', ['client', 'server']);
-  api.addFiles('join-requests__methods.js', ['client', 'server']);
-  api.addFiles('join-requests__publications.js', 'server');
-  api.addFiles('join-requests__subscriptions.js', 'client');
+  api.use('frontend-base', 'client');
+  api.use('join-requests', 'client');
+  api.use('matches', 'client');
+  api.addFiles('__item/incoming-join-requests__item.html', 'client');
+  api.addFiles('__item/incoming-join-requests__item.js', 'client');
+  api.addFiles('incoming-join-requests.html', 'client');
+  api.addFiles('incoming-join-requests.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('join-requests');
-  api.addFiles('join-requests-tests.js');
+  api.use('incoming-join-requests');
+  api.addFiles('incoming-join-requests-tests.js');
 });

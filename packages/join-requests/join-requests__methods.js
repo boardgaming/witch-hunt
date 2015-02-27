@@ -6,7 +6,7 @@ Meteor.methods({
       matchId: matchId
     });
   },
-  'joinRequests.approve': function(id) {
+  'joinRequests.accept': function(id) {
     var joinRequest = JoinRequests.findOne(id);
 
     Matches.update(joinRequest.matchId, {

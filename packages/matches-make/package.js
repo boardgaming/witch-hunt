@@ -14,6 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.use('frontend-base', 'client');
   api.use('pending-invites', 'client');
+  api.use('incoming-join-requests', 'client');
   api.use('match-panel', 'client');
   api.use('match-request-panel', 'client');
   api.use('match-request-results', 'client');

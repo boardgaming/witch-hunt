@@ -9,7 +9,7 @@ MatchRequests.after.insert(function(userId, matchRequest) {
     Matches.insert({
       matchRequestId: matchRequest._id,
       host: matchRequest.userId,
-      approved: false
+      ready: false
     });
   }
 });
@@ -18,7 +18,7 @@ MatchRequests.before.remove(function(userId, matchRequest) {
   if (matchRequest.hosting) {
     Matches.remove({
       matchRequestId: matchRequest._id,
-      approved: false
+      ready: false
     });
   }
 });
